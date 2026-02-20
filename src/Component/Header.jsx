@@ -65,12 +65,7 @@ const Header = ({ onBook, onPortal, onNavigate }) => {
 
         {/* Action Buttons (Desktop) */}
         <div className="flex items-center cursor-pointer space-x-4">
-          <button 
-            onClick={onPortal}
-            className={`hidden md:block text-xs cursor-pointer font-bold uppercase tracking-widest border px-6 py-2.5 rounded-full transition-all ${isScrolled ? 'border-teal-900 text-teal-900 hover:bg-teal-900 hover:text-white' : 'border-white text-white hover:bg-white hover:text-teal-950'}`}
-          >
-            Patient Portal
-          </button>
+      
           
           {/* Hidden on Mobile/Tablet, visible on Desktop */}
           <button 
@@ -109,12 +104,7 @@ const Header = ({ onBook, onPortal, onNavigate }) => {
             
             {/* Action Buttons in Mobile Menu */}
             <div className="flex flex-col space-y-4 pt-4">
-              <button 
-                onClick={() => { onPortal(); setMobileMenuOpen(false); }} 
-                className="text-center text-sm font-bold uppercase tracking-widest text-teal-700 border border-teal-700 py-3 rounded-full"
-              >
-                Patient Portal
-              </button>
+          
               <button 
                 onClick={() => { onBook(); setMobileMenuOpen(false); }} 
                 className="text-center text-sm font-bold uppercase tracking-widest bg-teal-700 text-white py-4 rounded-full shadow-lg shadow-teal-200"

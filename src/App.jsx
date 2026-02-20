@@ -10,7 +10,7 @@ import NewPatient from './Component/NewPatient';
 import Blog from './Component/Blog';
 import Investment from './Component/Investment';
 import TestimonialCarousel from './Component/TestimonialCarousel';
-import { BookingModal, PortalModal, ServiceDetailModal, DoctorProfileModal } from './Component/Modals';
+import { BookingModal } from './Component/Modals';
 import './App.css'
 
 import { SERVICES, DOCTORS } from './constants';
@@ -208,9 +208,6 @@ const App = () => {
       
       {/* Modals Container */}
       <BookingModal isOpen={isBookingOpen} onClose={() => setIsBookingOpen(false)} onSuccess={() => showNotification("Appointment request sent successfully!")} />
-      <PortalModal isOpen={isPortalOpen} onClose={() => setIsPortalOpen(false)} onSuccess={() => showNotification("Logged in successfully.")} />
-      <ServiceDetailModal isOpen={!!selectedService} service={selectedService} onClose={() => setSelectedService(null)} onBook={openBooking} />
-      <DoctorProfileModal isOpen={!!selectedDoctor} doctor={selectedDoctor} onClose={() => setSelectedDoctor(null)} onBook={openBooking} />
     </div>
   );
 };
