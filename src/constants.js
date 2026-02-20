@@ -5,6 +5,7 @@ import img4 from './assets/engle.jfif'
 import skin from './assets/skin.jfif'
 import mos from './assets/mos.jfif'
 import Laser from './assets/Laser.jfif'
+import img5 from './assets/Jiwoo.jpg'
 
 export const SERVICES = [
   {
@@ -48,7 +49,7 @@ export const SERVICES = [
 export const DOCTORS = [
   {
     id: 'dr-miller',
-    name: 'Dr. Andrew Santiago',
+    name: 'Dr. Stone Sanchez',
     title: 'MD, FAAD',
     specialties: ['Medical Dermatology', 'Mohs Surgery'],
     image: img1,
@@ -57,7 +58,7 @@ export const DOCTORS = [
   },
   {
     id: 'dr-chen',
-    name: 'Dr. Stone Sanchez',
+    name: 'Dr. Andrew Santiago',
     title: 'MD, FAAD',
     specialties: ['Dermatologic Surgeon', 'Plastic Surgeon'],
     image: img2,
@@ -72,7 +73,16 @@ export const DOCTORS = [
     image: img3,
     bio: 'Dr. Hernandez Jose excels in high-precision energy-based therapies. His practice integrates the latest in fractional laser technology and radio-frequency skin tightening to deliver transformative clinical results with minimal recovery time.',
     education: ['Seoul National University (SNU) College of Medicine', 'Seoul, South Korea', 'Society for Dermatologic Surgery Fellow']
-  }
+  },
+  {   id: 'Dr Sarafi',
+    name: 'Dr. Jiwoo  Baek',
+    title: 'Dr. and Ceo of Jiwoobaek Dermatology Clinic',
+    specialties: ['Skin Dermatologist'],
+    image: img5,
+    bio: "A leading authority in energy-based rejuvenation, CEO Jiwoo Baek specializes in the application of advanced light and thermal modalities. His practice focuses on the intersection of fractional laser science and radio-frequency lifting to achieve profound skin remodeling with a primary emphasis on optimizing patient recovery times.",
+    education: ['Seoul National University (SNU) College of Medicine', 'Seoul, South Korea', 'Society for Dermatologic Surgery Fellow']
+  },
+  // ... other properties
 ];
 
 export const TESTIMONIALS = [
