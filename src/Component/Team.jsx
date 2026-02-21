@@ -25,43 +25,42 @@ const Team = ({ onDoctorSelect, onBook }) => {
           {DOCTORS.map((doctor) => (
             <div 
               key={doctor.id}
-              className="flex flex-col lg:flex-row gap-8 items-center bg-teal-50/30 rounded-[2.5rem] p-8 md:p-12 hover:bg-teal-50 transition-colors cursor-pointer group"
+              className="flex flex-col lg:flex-row gap-8 lg:gap-10 items-center lg:items-start bg-teal-50/30 rounded-[2.5rem] p-8 md:p-12 hover:bg-teal-50 transition-colors cursor-pointer group"
               onClick={() => onDoctorSelect(doctor)}
             >
-              {/* Doctor Image Container */}
-              <div className="w-74 h-80 flex-shrink-10 overflow-hidden rounded-12xl shadow-xl relative">
+              {/* Doctor Image Container - UPDATED FOR RESPONSIVENESS */}
+              <div className="w-full max-w-[260px] sm:max-w-[300px] lg:w-64 aspect-[4/5] flex-shrink-0 overflow-hidden rounded-[2rem] lg:rounded-[3rem] shadow-2xl relative mx-auto lg:mx-0">
                 <img 
                   src={doctor.image} 
                   alt={doctor.name} 
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                  className="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100"
                 />
-               
               </div>
 
               {/* Doctor Info */}
-              <div className="flex-1">
+              <div className="flex-1 text-center lg:text-left w-full">
                 <h3 className="text-3xl font-serif text-teal-950 mb-1">{doctor.name}</h3>
                 <p className="text-teal-600 font-bold text-sm tracking-widest uppercase mb-6">
                   {doctor.title}
                 </p>
                 
-                <div className="space-y-4 mb-8">
+                <div className="space-y-4 mb-8 inline-block text-left">
                   {doctor.specialties.map((spec) => (
                     <div key={spec} className="flex items-center text-sm text-gray-600 font-medium">
-                      <div className="w-1.5 h-1.5 rounded-full bg-teal-400 mr-3"></div>
+                      <div className="w-1.5 h-1.5 rounded-full bg-teal-400 mr-3 shrink-0"></div>
                       {spec}
                     </div>
                   ))}
                 </div>
 
                 {/* Actions */}
-                <div className="flex gap-4">
+                <div className="flex flex-row gap-4 w-full">
                   <button 
                     onClick={(e) => { 
                       e.stopPropagation(); 
                       onDoctorSelect(doctor); 
                     }}
-                    className="bg-white cursor-pointer border border-teal-100 text-teal-900 px-6 py-3 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-teal-100 transition-colors"
+                    className="flex-1 bg-white cursor-pointer border border-teal-100 text-teal-900 px-4 py-3.5 rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-teal-100 transition-colors"
                   >
                     Profile
                   </button>
@@ -70,7 +69,7 @@ const Team = ({ onDoctorSelect, onBook }) => {
                       e.stopPropagation(); 
                       onBook(); 
                     }}
-                    className="flex-1 bg-teal-800 cursor-pointer text-white px-8 py-3 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-teal-950 transition-colors shadow-lg"
+                    className="flex-[2] bg-teal-800 cursor-pointer text-white px-4 py-3.5 rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-teal-950 transition-colors shadow-lg"
                   >
                     Schedule
                   </button>
