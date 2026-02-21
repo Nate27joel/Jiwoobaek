@@ -29,18 +29,13 @@ const Team = ({ onDoctorSelect, onBook }) => {
               onClick={() => onDoctorSelect(doctor)}
             >
               {/* Doctor Image Container */}
-              <div className="w-64 h-80 flex-shrink-0 overflow-hidden rounded-2xl shadow-xl relative">
+              <div className="w-74 h-80 flex-shrink-10 overflow-hidden rounded-12xl shadow-xl relative">
                 <img 
                   src={doctor.image} 
                   alt={doctor.name} 
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
                 />
-                <div className="absolute top-4 left-4 flex items-center bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full shadow-sm">
-                  <div className="w-2 h-2 rounded-full bg-green-500 mr-2 animate-pulse"></div>
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-teal-900">
-                    Available Today
-                  </span>
-                </div>
+               
               </div>
 
               {/* Doctor Info */}
