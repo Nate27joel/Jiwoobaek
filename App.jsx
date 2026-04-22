@@ -6,7 +6,7 @@ import Team from './Component/Team';
 import Locations from './Component/Locations';
 import Footer from './Component/Footer';
 import NewPatient from './Component/NewPatient';
-
+import './App.css'
 
 import { 
   BookingModal, 
